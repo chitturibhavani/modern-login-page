@@ -27,7 +27,7 @@ Perfect for authentication pages, portfolio demos, or UI practice.
 |-----------|---------|
 | **HTML5** | Structure & layout |
 | **CSS3**  | Styling, transparency, alignment, design |
-| **JavaScript** | Basic interactivity (if added) |
+| **JavaScript** | Basic interactivity |
 
 ---
 
