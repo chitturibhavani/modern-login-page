@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login_page.css">
+    <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Login & SignUp Page</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>LOGO.</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Blog</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="#" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="login-button" onclick="signin()">Sign In</button>
+            <button class="btn" id="signup-button" onclick="signup()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class='bxr  bx-menu' onclick="myMenuFunction()"></i> 
+        </div>
+    </nav>
+
+<!------------------------------------ Form Box ------------------------------------>
+    <div class="form-box">
+
+        <!------------------------------- login Form ----------------------------------->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account ? <a href="#" onclick="signup()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" name="" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label for=""><a href="#">Forgot Password ?</a></label>
+                </div>
+            </div>
+        </div>
+        <!-----------------------registration form--------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account ? <a href="#" onclick="signin()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" name="" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label for=""><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if(i.className === "nav-menu"){
+            i.className += "responsive";
+        } else{
+            i.className = 'nav-menu';
+        }
+    }
+</script>
+<script>
+    var loginButton = document.getElementById("login-button");
+    var registerButton = document.getElementById("signup-button");
+    var login = document.getElementById("login");
+    var register = document.getElementById("register");
+
+    function signin() {
+        login.style.left = "4px";
+        register.style.right = "-520px";
+        loginButton.className += ' white-btn';
+        registerButton.className = 'btn';
+        login.style.opacity = 1
+        register.style.opacity = 0
+    }
+
+    function signup() {
+        login.style.left = "-510px";
+        register.style.right = "5px";
+        loginButton.className = 'btn';
+        registerButton.className += ' white-btn';
+        login.style.opacity = 0
+        register.style.opacity = 1
+    }
+</script>
+
+</body>
+</html>
